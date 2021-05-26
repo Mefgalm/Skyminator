@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <WarningsAsErrors>FS0025</WarningsAsErrors>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="DynamicExpresso.Core" Version="2.4.0" />
+      <PackageReference Include="FsToolkit.ErrorHandling" Version="2.5.0" />
+      <PackageReference Include="LiteDB.FSharp" Version="2.16.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Battle\Battle.fsproj" />
+      <ProjectReference Include="..\Common\Common.fsproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Include="Rand.fs" />
+      <Compile Include="Types.fs" />
+      <Compile Include="Domain\Dice.fs" />
+      <Compile Include="Commands\CSharpRun.fs" />
+      <Compile Include="Commands\Dice.fs" />
+      <Compile Include="Commands\DynamicCommand.fs" />
+      <Compile Include="Commands\Game.fs" />
+      <Compile Include="Commands\Ruin.fs" />
+      <Compile Include="Dabase\Db.fs" />
+      <Compile Include="Dabase\RuinDb.fs" />
+      <Compile Include="Dabase\DynamicCommandDb.fs" />
+      <Compile Include="Runner.fs" />
+      <Compile Include="Twitch\Views.fs" />
+      <Compile Include="Twitch\TwitchIrcClient.fs" />
+      <Compile Include="Twitch\TwitchConfig.fs" />
+      <Compile Include="Twitch\Chat.fs" />
+    </ItemGroup>
+
+</Project>

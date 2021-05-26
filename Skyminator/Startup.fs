@@ -21,7 +21,7 @@ type Startup(configuration: IConfiguration) =
         let intiCommands = [
             "гдевебка", "ща врублю!"
             "discord", "https://discord.gg/qcanUY7VHd"
-            "bot", "https://github.com/Mefgalm/SharpBot"
+            "bot", "https://github.com/Mefgalm/Skyminator"
         ]
         
         let gameMb = battleMb twitchConfig.ReviveAfterMins

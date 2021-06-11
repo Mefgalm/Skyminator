@@ -29,6 +29,9 @@ let private checkAlreadyInBattle nick battle =
     else
         Ok ()
     
+    
+    
+    
 let getPlayerClass =
     function
     | "wiz" -> Ok <| PlayerClass.Wizard

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body {
+            
+        }
+        html {
+            background-color: #18171c;
+        }
+
+    </style>
+</head>
+<body onload="run();">
+    <script>
+        function run() {
+            let socket = new WebSocket("ws://localhost:5801/ws");
+
+            socket.onopen = function (event) {
+                console.log(event);
+            };
+
+            setInterval(function () {
+                let x = "hb" + Date.now();
+                console.log(x)
+                socket.send(x);
+            }, 5000);
+
+            socket.onmessage = function (event) {
+                console.log(event.data);
+            }
+        }
+
+    </script>
+</body>
+</html>
